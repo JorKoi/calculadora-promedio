@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora | Calculadora de Promedio UTM</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/calculadora.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <p class="logo">Calculadora de Promedio UTM</p>
+    <nav aria-label="Menú principal">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="calculadora.html" aria-current="page">Calculadora</a></li>
+        <li><a href="ayuda.html">Ayuda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <h1>Calcular promedio</h1>
+    <p>Los campos marcados con * son obligatorios. Las notas van de 0 a 10.</p>
+    <noscript><p class="aviso">Para usar la calculadora necesitas activar JavaScript en tu navegador.</p></noscript>
+
+    <div class="columnas">
+      <form id="formulario" class="formulario" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre del estudiante *</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" aria-describedby="error-nombre">
+          <p class="error" id="error-nombre"></p>
+        </div>
+
+        <div class="campo">
+          <label for="materia">Materia *</label>
+          <select id="materia" name="materia" aria-describedby="error-materia">
+            <option value="">Seleccione una materia</option>
+            <option>Desarrollo Basado en Plataformas</option>
+            <option>Aseguramiento de Calidad del Software</option>
+            <option>Redes de Computadoras</option>
+            <option>Base de Datos</option>
+          </select>
+          <p class="error" id="error-materia"></p>
+        </div>
+
+        <div class="notas">
+          <div class="campo">
+            <label for="nota1">Parcial 1 *</label>
+            <input type="number" id="nota1" name="nota1" min="0" max="10" step="0.01" aria-describedby="error-nota1">
+            <p class="error" id="error-nota1"></p>
+          </div>
+          <div class="campo">
+            <label for="nota2">Parcial 2 *</label>
+            <input type="number" id="nota2" name="nota2" min="0" max="10" step="0.01" aria-describedby="error-nota2">
+            <p class="error" id="error-nota2"></p>
+          </div>
+          <div class="campo">
+            <label for="nota3">Parcial 3 *</label>
+            <input type="number" id="nota3" name="nota3" min="0" max="10" step="0.01" aria-describedby="error-nota3">
+            <p class="error" id="error-nota3"></p>
+          </div>
+        </div>
+
+        <button type="submit" class="boton">Calcular promedio</button>
+      </form>
+
+      <section class="panel" aria-labelledby="titulo-resultado">
+        <h2 id="titulo-resultado">Resultado</h2>
+        <p id="resultado" class="resultado" aria-live="polite">Aún no has calculado ningún promedio.</p>
+      </section>
+    </div>
+
+    <section>
+      <h2>Historial</h2>
+      <div class="tabla-contenedor">
+        <table>
+          <caption>Promedios calculados en esta sesión</caption>
+          <thead>
+            <tr>
+              <th scope="col">Estudiante</th>
+              <th scope="col">Materia</th>
+              <th scope="col">Promedio</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody id="historial"></tbody>
+        </table>
+      </div>
+      <button type="button" id="borrar" class="boton secundario">Borrar historial</button>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Proyecto de Desarrollo Basado en Plataformas · Universidad Técnica de Manabí · 2026</p>
+  </footer>
+</body>
+</html>
