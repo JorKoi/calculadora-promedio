@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda | Calculadora de Promedio UTM</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/ayuda.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <p class="logo">Calculadora de Promedio UTM</p>
+    <nav aria-label="Menú principal">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="ayuda.html" aria-current="page">Ayuda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <h1>Ayuda</h1>
+
+    <section>
+      <h2>¿Cómo se calcula el promedio?</h2>
+      <p>Se suman las notas de los tres parciales y el resultado se divide para tres. Por ejemplo, con 8, 6 y 9 la suma es 23 y el promedio es 7,67.</p>
+    </section>
+
+    <section>
+      <h2>Preguntas frecuentes</h2>
+
+      <article class="faq">
+        <h3><button type="button" class="pregunta" aria-expanded="true" aria-controls="respuesta1">¿Con qué nota apruebo?</button></h3>
+        <div id="respuesta1" class="respuesta">
+          <p>Con un promedio de 7 o más la materia aparece como aprobada. Si es menor a 7 aparece como reprobada.</p>
+        </div>
+      </article>
+
+      <article class="faq">
+        <h3><button type="button" class="pregunta" aria-expanded="true" aria-controls="respuesta2">¿Puedo usar decimales?</button></h3>
+        <div id="respuesta2" class="respuesta">
+          <p>Sí. Puedes escribir notas como 7.5 o 8.25. El promedio se muestra con dos decimales.</p>
+        </div>
+      </article>
+
+      <article class="faq">
+        <h3><button type="button" class="pregunta" aria-expanded="true" aria-controls="respuesta3">¿Se guardan mis notas?</button></h3>
+        <div id="respuesta3" class="respuesta">
+          <p>No. El historial solo dura mientras tienes abierta la página. Al recargarla la tabla queda vacía.</p>
+        </div>
+      </article>
+    </section>
+
+    <p><a class="boton" href="calculadora.html">Volver a la calculadora</a></p>
+  </main>
+
+  <footer class="pie">
+    <p>Proyecto de Desarrollo Basado en Plataformas · Universidad Técnica de Manabí · 2026</p>
+  </footer>
+</body>
+</html>
