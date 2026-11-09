@@ -67,6 +67,7 @@ formulario.addEventListener("submit", function (evento) {
   if (!valido) {
     resultado.textContent = "Revise los campos marcados en el formulario.";
     resultado.className = "resultado reprobado";
+    formulario.querySelector("[aria-invalid='true']").focus();
     return;
   }
 
